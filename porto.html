@@ -1,36 +1,152 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Portofolio SPARTAN</title>
-    </head>
-    <body>
-        <h1><img src="images/tommy.png" alt="Me" style="float:left;width:10%">HI!<br>Aku Fajar Kurniawan</h1>
-        
-        <p>Mahasiswa dari Institut Teknologi Bandung, aku mengambil jurusan Teknik Informatika dan sedang menjalani semester tiga. Aku tinggal di Bandung dan berasal dari Klaten, Jawa Tengah. Bagiku, hidup adalah selalu berusaha menjadi versi dirimu yang lebih baik dari kemarin. Hobiku bermain video game. Ini adalah website pertamaku dan website ini akan menceritakan tentangku!!</p>
-        <hr>
-        <h2>Minat dan Bakat</h2>
-        <p>Aku berminat mendalami bidang Software Engineering dan Web Development.
-Bakatku adalah kemampuan kuantitatif dan penalaran.
-        </p>
-        <h2>Projects</h2>
-        <p>Projek yang pernah aku handle(List ini akan terus diupdate!!) </p>
-        <li><a href="https://github.com/Labpro-21/if1210-2024-tubes-k01-g">Tugas Besar Daspro "OWCA Game"</a><br>Ini adalah tugas besarku untuk mata kuliah Dasar Pemrograman dengan tim beban :)</li>
-        <li>Steering Committee SIMFONI GAMAIS ITB 2024</li>
-        <li>Staff Materi dan Metode Setyaki Back to School 2023</li>
-        <h2>Kemampuan</h2>
-        <li>Mampu membuat program sederhana dalam python</li>
-        <li>Mampu membuat website sederhana dengan html dan css</li>
-        <h2>Pencapaian</h2>
-        Sedikit pencapaian di hidupku yang masih aku ingat:
-        <li>IP 4.0 saat semester 2</li>
-        <!-- <li>Juara II Lomba Tartil Putra MAPSI SD Tingkat Kabupaten</li>
-        <li>Juara III ONS Matematika SMP Tingkat Kabupaten</li>
-        <li>Ranking 1 Paralel saat SMP</li> -->
-        <h2>Pendidikan</h2>
-        <li>SMAN 1 Klaten (2020 - 2023)</li>
-        <li>Institut Teknologi Bandung, S1 Teknik Informatika (2023 - Sekarang)</li>
-        <h2>Hubungi Aku!</h2>
-        <li><a href="mailto:fajar2k5@gmail.com">Kirimkan aku surel.</a></li>
-        <li><a href="https://www.linkedin.com/in/fajar-kurniawan-870818297">Laman LinkedIn-ku.</a></li>
-    </body>
+<html lang="en">
+<head>
+<title>Fajar's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: #ddd;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  background-color: #242424;
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #488eff;
+  position: fixed;
+  width: 100%;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #0e5781;
+  color: #ffffff;
+}
+
+/* Style the content */
+/* Container to center the content horizontally and vertically */
+.container {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;     /* Centers content vertically */
+  height: 50vh;           /* Full viewport height to center vertically */
+}
+
+/* Content container to keep text and image on the same line */
+.content {
+  display: flex;
+  align-items: center;     /* Align items vertically on the same line */
+  text-align: center;      /* Center text within the content */
+}
+
+.content h2, .content p {
+  margin: 0 10px;          /* Add margin around text for spacing */
+}
+
+.profile-img {
+  width: 150px;             /* Adjust width as needed */
+  height: auto;            /* Maintain aspect ratio */
+  border-radius: 50%;      /* Make the image circular */
+  margin-left: 30px;       /* Add space between text and image */
+}
+
+/* Style the content */
+.content2 {
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+}
+
+.content3 {
+  display: flex;
+  align-items: center;     /* Align items vertically on the same line */
+  text-align: center;      /* Center text within the content */
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+  gap: 65px
+}
+
+.link1:hover {
+    color: aqua;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="#bio">Biodata</a>
+  <a href="#skill">Skills</a>
+  <a href="#minat">Minat</a>
+  <a href="#project">Projects</a>
+</div>
+
+<div class="container">
+    <div class="content">
+      <div><h2 style="font-size: 300%;">Hi! I'm</h2>
+      <p style="font-size: 200%;">Fajar Kurniawan</p></div>
+      <img src="images/fajar.jpg" alt="Me" class="profile-img">
+    </div>
+  </div>
+
+<div class="content2">
+    <h2 id="bio">About Me &#128075;</h2>
+    <p>Mahasiswa dari Institut Teknologi Bandung, aku mengambil jurusan Teknik Informatika dan sedang menjalani semester tiga.
+        Aku tinggal di Bandung dan berasal dari Klaten, Jawa Tengah. Bagiku, hidup adalah selalu berusaha menjadi versi dirimu yang lebih baik dari kemarin.
+        Hobiku bermain video game. Ini adalah website pertamaku.</p>
+</div>
+
+<div class="content2">
+    <h2 id="bio">Pendidikan</h2>
+    <li>SMAN 1 Klaten (2020 - 2023)</li>
+    <li>Institut Teknologi Bandung, S1 Teknik Informatika (2023 - Sekarang)</li>
+</div>
+
+<div class="content3"  id="minat">
+    <div><h2>Minat</h2>
+        <p>Aku berminat mendalami bidang Software Engineering dan Web Development. Selain itu aku tertarik untuk menyelami dunia Data Science serta AI maupun ML.</p></div>
+    <div><h2 id="minat">Bakat</h2>
+        <p>Bakatku adalah kemampuan kuantitatif dan penalaran. Aku mampu memahami kedua hal tersebut dengan cukup mudah.</p></div>
+</div>
+
+<div class="content2">
+    <h2 id="skill">Kemampuan</h2>
+    <li>Mampu membuat program sederhana dalam python</li>
+    <li>Mampu membuat website sederhana dengan html dan css</li>
+</div>
+
+<h2 class="content2" id="project">Projek dan Kepanitiaan</h2>
+<div class="content2"><div style="margin-bottom:10px; height: fit-content;width: 500px; border-width: 2px;border-color: #ffffff; border-style: solid; padding:17px; border-radius: 10px;"><a target="_blank" class="link1" href="https://github.com/Labpro-21/if1210-2024-tubes-k01-g">Tugas Besar Daspro "OWCA Game"</a> Ini adalah tugas besarku untuk mata kuliah Dasar Pemrograman dengan tim beban :)</div>
+<div style="margin-bottom:10px; height : fit-content; width: 500px; border-width: 2px;border-color: #ffffff; border-style: solid; padding:17px; border-radius: 10px;">Steering Committee SIMFONI GAMAIS ITB 2024</div>
+<div style="margin-bottom:10px; height: fit-content; width: 500px; border-width: 2px;border-color: #ffffff; border-style: solid; padding:17px; border-radius: 10px;">Staff Materi dan Metode Setyaki Back to School 2023</div></div>
+
+<div class="content2"><h2>Pencapaian</h2>
+    <li>IP 4.0 saat semester 2</li>
+    <li>Juara III OSN Matematika SMP Tingkat Kabupaten</li></div>
+
+</body>
 </html>
+
+
