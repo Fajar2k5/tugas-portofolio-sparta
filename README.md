@@ -11,6 +11,6 @@ Buka file porto.html dengan web browser
 # Kesulitan 
 Belum memiliki pengalaman web development sebelumnya sehingga kesulitan dalam mencari syntax yang digunakan dan belum terbiasa
 # Identitas Pembuat
-Nama: Fajar Kurniawan
-NIM: 19623181/13523027
-Klan SPARTA: C
+- Nama: Fajar Kurniawan
+- NIM: 19623181/13523027
+- Klan SPARTA: C
