@@ -5,83 +5,95 @@
 <link rel="icon" type="image/x-icon" href="images/icon.ico">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
 * {
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-family: 'Poppins', 'Trebuchet MS', Helvetica, sans-serif;
   color: #ddd;
 }
 
 body {
   margin: 0;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
-  background-color: #242424;
-
+  font-family: 'Poppins', 'Trebuchet MS', Helvetica, sans-serif;
+  background: #0f172a;
+  padding-top: 60px;
 }
 
-/* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #488eff;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  /* -webkit-backdrop-filter: blur(10px); */
   position: fixed;
-  width: 100%;
+  width: auto;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+  z-index: 1000;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* Style the topnav links */
 .topnav a {
-  float: left;
-  display: block;
+  display: inline-block;
   color: #ffffff;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 20px;
   text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
-/* Change color on hover */
 .topnav a:hover {
-  background-color: #0e5781;
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f6ad55;
 }
 
-/* Style the content */
-/* Container to center the content horizontally and vertically */
+#bio, #skill, #project {
+  scroll-margin-top: 100px;
+}
+
 .container {
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center;     /* Centers content vertically */
-  height: 50vh;           /* Full viewport height to center vertically */
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }
 
-/* Content container to keep text and image on the same line */
 .content {
   display: flex;
-  align-items: center;     /* Align items vertically on the same line */
-  text-align: center;      /* Center text within the content */
+  align-items: center;
+  text-align: center;
 }
 
 .content h2, .content p {
-  margin: 0 10px;          /* Add margin around text for spacing */
+  margin: 0 10px;
 }
 
 .profile-img {
-  width: 150px;             /* Adjust width as needed */
-  height: auto;            /* Maintain aspect ratio */
-  border-radius: 50%;      /* Make the image circular */
-  margin-left: 30px;       /* Add space between text and image */
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-left: 30px;
 }
 
-/* Style the content */
 .content2 {
   padding: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: justify;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: larger;
 }
 
 .content3 {
   display: flex;
-  align-items: center;     /* Align items vertically on the same line */
-  text-align: center;      /* Center text within the content */
+  align-items: center;
+  text-align: center;
   padding: 10px;
   margin-left: 10%;
   margin-right: 10%;
@@ -93,66 +105,466 @@ body {
     color: aqua;
 }
 
-.button:hover {
- opacity: 10%;
+.button {
+  background: transparent;
+  color: #fff;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  padding: 6px 16px;
+  font-size: 1em;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+  border-radius: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#linkedin.button {
+  border-color: rgb(2,158,255);
+}
+
+#linkedin.button:hover {
+  background: rgb(2,158,255);
+}
+
+#email.button {
+  border-color: rgb(255, 2, 2);
+}
+
+#email.button:hover {
+  background: rgb(255, 2, 2);
+}
+
+#github.button {
+  border-color: rgb(255, 255, 255);
+}
+
+#github.button:hover {
+  background: rgb(255, 255, 255);
+  color: #0f172a;
+}
+
+.find-me {
+  align-items: center;
+  display: flex;
+}
+
+.find-me a {
+  text-decoration: none;
+}
+
+.header-hi {
+  font-size: 300%;
+  color: #f6ad55;
+  text-align: right;
+}
+
+.header-name {
+  font-size: 250%;
+  text-align: right;
+  transition: letter-spacing 0.3s ease;
+}
+
+.header-name:hover {
+  letter-spacing: 5px;
+}
+
+.projects-grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border-color: #f6ad55;
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h3 {
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+}
+
+.project-content p {
+  color: #ccc;
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tech-badge {
+  background-color: rgba(246, 173, 85, 0.2);
+  color: #f6ad55;
+  border: 1px solid #f6ad55;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8em;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.bio-section {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 0%;
+  margin-right: 0%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.bio-img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bio-badge {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  background-color: rgba(168, 85, 247, 0.2);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-right: 30%;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.skills-section {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #488eff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -19px;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  background: #488eff;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  padding-left: 20px;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  color: #bbb;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0f172a;
+  color: #ddd;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.back-to-top {
+  border-color: white;
+}
+
+.back-to-top a {
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  background: white;
+  color: #0f172a;
 }
 </style>
 </head>
 <body>
 
-<div class="topnav">
+<nav class="topnav">
   <a href="#bio">Biodata</a>
   <a href="#skill">Skills</a>
-  <a href="#minat">Minat</a>
   <a href="#project">Projects</a>
-</div>
+</nav>
 
-<div class="container">
+<header class="container">
     <div class="content">
-      <div><h2 style="font-size: 300%;">Hi! I'm</h2>
-      <p style="font-size: 200%;">Fajar Kurniawan</p></div>
+      <div>
+        <h2 class="header-hi">Hi! I'm</h2>
+        <p class="header-name">Fajar Kurniawan</p>
+      </div>
       <img src="images/fajar.jpg" alt="Me" class="profile-img">
     </div>
-  </div>
+  </header>
 
-  <div class="container" style="height: auto;"><div class="content">Find Me: 
-    <a target="_blank" href="https://www.linkedin.com/in/fajar-kurniawan-870818297"><button class="button" style="background-color: rgb(2,158,255);color: white;border: none;border-radius: 18px; font-weight: bold;">LinkedIn</button></a>
-    <a target="_blank" href="mailto:fajar2k5@gmail.com"><button class="button" style="background-color: rgb(255, 2, 2);color: white;border: none;border-radius: 12px;">E-Mail</button></div></div></a>
+  <main class="container" style="height: auto;">
+    <div class="content find-me">
+      <p>Find Me</p>
+      <a target="_blank" href="https://www.linkedin.com/in/fajar-kurniawan-870818297">
+        <button id="linkedin" class="button">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </button>
+      </a>
+      <a target="_blank" href="mailto:fajar2k5@gmail.com">
+        <button class="button" id="email">
+          <i class="fas fa-envelope"></i> E-Mail
+        </button>
+      </a>
+      <a target="_blank" href="https://github.com/Fajar2k5">
+        <button class="button" id="github">
+          <i class="fab fa-github"></i> Github
+        </button>
+      </a>
+    </div>
+  </main>
 
-<div class="content2">
-    <h2 id="bio">About Me &#128075;</h2>
-    <p>Mahasiswa dari Institut Teknologi Bandung, aku mengambil jurusan Teknik Informatika dan sedang menjalani semester tiga.
-        Aku tinggal di Bandung dan berasal dari Klaten, Jawa Tengah. Bagiku, hidup adalah selalu berusaha menjadi versi dirimu yang lebih baik dari kemarin.
-        Hobiku bermain video game. Ini adalah website pertamaku.</p>
-</div>
+  <section class="content2 bio-section">
+    <img src="images/jahim.jpeg" alt="Fajar" class="bio-img">
+    <div class="bio-text">
+      <h2 id="bio">About Me &#128075;</h2>
+      <p>Mahasiswa Institut Teknologi Bandung. Aku mengambil jurusan Teknik Informatika dan sedang menjalani semester lima.
+        Minatku ada di software engineering dan cybersecurity.<br>Bagian dari Himpunan Mahasiswa Informatika ITB.
+      </p>
+      <span class="bio-badge">Selamat pagi, <strong><em>PIPS!</em></strong></span>
+    </div>
+  </section>
 
-<div class="content2">
+
+  <section class="content2">
     <h2 id="bio">Pendidikan</h2>
-    <li>SMAN 1 Klaten (2020 - 2023)</li>
-    <li>Institut Teknologi Bandung, S1 Teknik Informatika (2023 - Sekarang)</li>
-</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>SMAN 1 Klaten</h3>
+          <p>2020 - 2023</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Institut Teknologi Bandung, S1 Teknik Informatika</h3>
+          <p>2023 - Sekarang</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="content3"  id="minat">
-    <div><h2>Minat</h2>
-        <p>Aku berminat mendalami bidang Software Engineering dan Web Development. Selain itu aku tertarik untuk menyelami dunia Data Science serta AI maupun ML.</p></div>
-    <div><h2 id="minat">Bakat</h2>
-        <p>Bakatku adalah kemampuan kuantitatif dan penalaran. Aku mampu memahami kedua hal tersebut dengan cukup mudah.</p></div>
-</div>
+  <section class="content2 skills-section">
+    <h2 id="skill">Skills</h2>
+    <div class="skills-container">
+      <span class="skill-badge" style="background-color: rgba(0,0,255,0.2); border-color: blue; color: white;">
+        <i class="fas fa-code"></i> C
+      </span>
+      <span class="skill-badge" style="background-color: rgba(0,0,139,0.2); border-color: darkblue; color: white;">
+        <i class="fas fa-code"></i> C++
+      </span>
+      <span class="skill-badge" style="background-color: rgba(128,0,128,0.2); border-color: purple; color: white;">
+        <i class="fas fa-code"></i> C#
+      </span>
+      <span class="skill-badge" style="background-color: rgba(255,165,0,0.2); border-color: orange; color: white;">
+        <i class="fab fa-java"></i> Java
+      </span>
+      <span class="skill-badge" style="background-color: rgba(0,128,0,0.2); border-color: green; color: white;">
+        <i class="fab fa-python"></i> Python
+      </span>
+      <span class="skill-badge" style="background-color: rgba(0,255,255,0.2); border-color: cyan; color: white;">
+        <i class="fab fa-golang"></i> Go
+      </span>
+      <span class="skill-badge" style="background-color: rgba(255,165,0,0.2); border-color: orange; color: white;">
+        <i class="fab fa-html5"></i> HTML
+      </span>
+      <span class="skill-badge" style="background-color: rgba(0,0,255,0.2); border-color: blue; color: white;">
+        <i class="fab fa-css3"></i> CSS
+      </span>
+      <span class="skill-badge" style="background-color: rgba(0,255,255,0.2); border-color: cyan; color: white;">
+        <i class="fab fa-react"></i> React
+      </span>
+      <span class="skill-badge" style="background-color: rgba(0,128,128,0.2); border-color: teal; color: white;">
+        <i class="fab fa-css3"></i> Tailwind
+      </span>
+      <span class="skill-badge" style="background-color: rgba(128,128,128,0.2); border-color: gray; color: white;">
+        <i class="fab fa-github"></i> GitHub
+      </span>
+      <span class="skill-badge" style="background-color: rgba(255,255,0,0.2); border-color: yellow; color: white;">
+        <i class="fab fa-js"></i> JavaScript
+      </span>
+      <span class="skill-badge" style="background-color: rgba(0,0,0,0.2); border-color: black; color: white;">
+        <i class="fas fa-cubes"></i> Unity
+      </span>
+      <span class="skill-badge" style="background-color: rgba(0,0,255,0.2); border-color: blue; color: white;">
+        <i class="fas fa-database"></i> MariaDB
+      </span>
+    </div>
+  </section>
 
-<div class="content2">
-    <h2 id="skill">Kemampuan</h2>
-    <li>Mampu membuat program sederhana dalam python</li>
-    <li>Mampu membuat website sederhana dengan html dan css</li>
-</div>
+  <section class="content2 project-section" id="project">
+  <h2 id="projects">Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <a href="https://github.com/orvin14/Tubes2_BayuSangAlkemis/tree/main">
+        <div class="project-image">
+          <img src="images/bayualkemis.png" alt="Little Alchemy Recipe Finder">
+        </div>
+        <div class="project-content">
+          <h3>Little Alchemy Recipe Finder</h3>
+          <p>Recipe finder for the game Little Alchemy 2 using BFS and DFS algorithms</p>
+          <div class="project-tech">
+            <span class="tech-badge">NodeJS</span>
+            <span class="tech-badge">Tailwind</span>
+            <span class="tech-badge">GoLang</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="project-card">
+      <a href="https://github.com/Kurosue/Tubes3_kasane-teto/tree/main">
+        <div class="project-image">
+          <img src="images/atspmo.png" alt="Project 2">
+        </div>
+        <div class="project-content">
+          <h3>CV ATS PMO</h3>
+          <p>CV Applicant Tracking System Using String Matching Algorithms</p>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">MySQL</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="project-card">
+      <a href="https://github.com/GAIB22/praktikum-if1221-logika-komputasional-logika-klaten/tree/main">
+        <div class="project-image">
+          <img src="images/joeldadukartu.png" alt="Project 3">
+        </div>
+        <div class="project-content">
+          <h3>Camel Pop!</h3>
+          <p>Board game dengan dadu di mana pemain dapat investasi, jalankan unta, pasang trap, display map</p>
+          <div class="project-tech">
+            <span class="tech-badge">Prolog</span>
+            <span class="tech-badge">CLI</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  </section>
 
-<h2 class="content2" id="project">Projek dan Kepanitiaan</h2>
-<div class="content2"><div style="margin-bottom:10px; height: fit-content;width: 500px; border-width: 2px;border-color: #ffffff; border-style: solid; padding:17px; border-radius: 10px;"><a target="_blank" class="link1" href="https://github.com/Labpro-21/if1210-2024-tubes-k01-g">Tugas Besar Daspro "OWCA Game"</a> Ini adalah tugas besarku untuk mata kuliah Dasar Pemrograman dengan tim beban :)</div>
-<div style="margin-bottom:10px; height : fit-content; width: 500px; border-width: 2px;border-color: #ffffff; border-style: solid; padding:17px; border-radius: 10px;">Steering Committee SIMFONI GAMAIS ITB 2024</div>
-<div style="margin-bottom:10px; height: fit-content; width: 500px; border-width: 2px;border-color: #ffffff; border-style: solid; padding:17px; border-radius: 10px;">Staff Materi dan Metode Setyaki Back to School 2023</div></div>
-
-<div class="content2"><h2>Pencapaian</h2>
-    <li>IP 4.0 saat semester 2</li>
-    <li>Juara III OSN Matematika SMP Tingkat Kabupaten</li></div>
+  <footer class="footer">
+    <p>&copy; Fajar Kurniawan 2025</p>
+    <button class="button back-to-top"><i class="fas fa-arrow-up"></i><a href="#"> Go back to top</a></button>
+    <p>Powered by ykd.dev</p>
+  </footer>
 
 </body>
 </html>
